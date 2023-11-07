@@ -17,13 +17,30 @@
 despues de ejecutar run, editar la configuracion y agregar en environment las variables de entorno, las variables de
 entorno estan en
 application.yml estan al final del archivo comentadas. para las pruebas unitarias, ejecutar las pruebas unitarias y
-editar la configuracion y agregar en environment las variables de entorno.
+editar la configuracion y agregar en environment las variables de entorno. Despues de eso darle en play.
 
 ![img.png](img.png)
 
 ![img_1.png](img_1.png)
 
 ![img_2.png](img_2.png)
+
+- Ejecutar test 
+
+![img_4.png](img_4.png)
+
+![img_5.png](img_5.png)
+
+![img_6.png](img_6.png)
+
+
+![img_7.png](img_7.png)
+
+
+## Pruebas unitarias
+- En el metodo que aparece en la imagen cambiar el correo, para que la prueba sea exitosa, ya que el add a la base de datos es real. 
+
+![img_8.png](img_8.png)
 
 ## Path y json
 
