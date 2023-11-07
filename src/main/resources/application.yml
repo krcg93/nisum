@@ -1,0 +1,43 @@
+micronaut:
+  application:
+    name: ${APPNAME}
+  router:
+    versioning:
+      enabled: true
+      default-version: 1
+      parameter:
+        enabled: true
+        names: 'v,api-version'
+      header:
+        enabled: true
+        names:
+          - 'X-API-VERSION'
+          - 'Accept-Version'
+      static-resources:
+        swagger:
+          paths: classpath:META-INF/swagger
+          mapping: /${micronaut.context-path}/swagger/**
+        swagger-ui:
+          paths: classpath:META-INF/swagger/views/swagger-ui
+          mapping: /${micronaut.context-path}/swagger-ui/**
+
+log:
+  application:
+    name: ${APPNAME}
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/nisum?preparedStatementCacheQueries=0
+    driverClassName: org.postgresql.Driver
+    username: kevinchilito
+    dialect: POSTGRES
+
+jpa:
+  default:
+    packages-to-scan:
+      - 'project.nisum.infrastructure.client.database.entity'
+
+
+  # SE DEBEN DEFINIR LAS SIGUIENTES VARIABLES DE ENTORNO (NUNCA QUEMAR CONFIGURACIONES)
+
+  #APPNAME=project-nisum;
