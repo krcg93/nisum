@@ -2,19 +2,16 @@ package project.nisum.application;
 
 import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Post;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import project.nisum.domain.model.users.UserRequest;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import org.modelmapper.ModelMapper;
-import project.nisum.domain.model.users.UserResponse;
 import project.nisum.domain.service.UserService;
 import project.nisum.infrastructure.shared.dto.users.UserRequestDto;
 import project.nisum.infrastructure.shared.dto.users.UserResponseDto;
 import reactor.core.publisher.Mono;
 
 import javax.inject.Inject;
-import java.util.List;
 
 @Controller("/users-services")
 public class UsersCtr {
